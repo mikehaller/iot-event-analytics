@@ -7,9 +7,9 @@
     ],
     "version": "0.9.9",
     "license": "MPL-2.0",
-    "private": "true",
+    "private": "false",
     "author": "Bosch.IO GmbH",
-    "publisher": "boschio",
+    "publisher": "MikeHaller",
     "repository": "https://github.com/GENIVI/iot-event-analytics",
     "engines": {
         "vscode": "^1.51.0"
