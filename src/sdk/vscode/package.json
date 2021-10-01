@@ -8,6 +8,7 @@
     "version": "0.9.9",
     "license": "MPL-2.0",
     "private": "false",
+    "keywords": [ "event-driven", "automotive", "rules", "genivi", "platform" ],
     "author": "Bosch.IO GmbH",
     "publisher": "MikeHaller",
     "repository": "https://github.com/GENIVI/iot-event-analytics",
@@ -18,6 +19,7 @@
         "*"
     ],
     "main": "./out/src/extension.js",
+    "extensionKind": [ "workspace", "ui" ],
     "contributes": {
         "commands": [
             {
