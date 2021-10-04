@@ -9,7 +9,7 @@
     "yarn": "yarn",
     "sdk.build": "node src/sdk/javascript/pack.js",
     "sdk.get": "node get-sdks.js",
-    "test": "nyc --report-dir=reports/coverage --reporter=cobertura --reporter=html --reporter=text-summary jasmine --config=test/jasmine.json",
+    "test": "nyc --report-dir=reports/coverage --reporter=lcov --reporter=cobertura --reporter=html --reporter=text-summary jasmine --config=test/jasmine.json",
     "test.no-coverage": "jasmine --config=test/jasmine.json",
     "docs.generate": "jsdoc -c jsdoc.json"
   },

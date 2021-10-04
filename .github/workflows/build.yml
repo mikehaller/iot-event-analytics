@@ -18,7 +18,20 @@ jobs:
       with:
         # Disabling shallow clone is recommended for improving relevancy of reporting
         fetch-depth: 0
-    - name: SonarCloud Scan
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Setup dependencies
+      run: yarn --frozen-lockfile
+    - name: Auditing dependencies
+      run: yarn audit
+    - name: Run unit tests
+      run: yarn test
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v2
+      with:
+        name: Coverage report
+        path: reports/coverage/    - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
